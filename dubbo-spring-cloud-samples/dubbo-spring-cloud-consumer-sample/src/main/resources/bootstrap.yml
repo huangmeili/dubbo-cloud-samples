@@ -1,0 +1,13 @@
+app:
+  name: dubbo-consumer1
+spring:
+  application:
+    name: ${app.name}
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 115.29.189.188:8848
+      config:
+        server-addr: 115.29.189.188:8848
+server:
+  port: 8082

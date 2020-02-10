@@ -1,0 +1,7 @@
+dubbo-spring-cloud-samples/dubbo-spring-cloud-consumer-sample/target/
+dubbo-spring-cloud-samples/dubbo-spring-cloud-rest-provider-sample/target/
+dubbo-spring-cloud-samples/dubbo-spring-cloud-provider-sample/target/
+demo-api/target/
+.idea/misc.xml
+*.iml
+.idea/

@@ -1,0 +1,36 @@
+app:
+  name: dubbo-rest-provider1
+spring:
+  application:
+    name: ${app.name}
+  main:
+      # Spring Boot 2.1 需要设定
+      allow-bean-definition-overriding: true
+
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: 115.29.189.188:8848
+
+server:
+  port: 8083
+
+dubbo:
+  scan:
+    base-packages: dubbo.rest.provider.service.impl
+  config:
+    multiple: true
+  protocols:
+    dubbo:
+      name: dubbo
+      port: -1
+  registry:
+    address: spring-cloud://115.29.189.188:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: dubborestmetadata
