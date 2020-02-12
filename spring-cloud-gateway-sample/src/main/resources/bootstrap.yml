@@ -16,7 +16,15 @@ spring:
       discovery:
         locator:
           #让gateway通过服务发现组件找到其他的微服务
-          enabled: true
+          enabled: false
+      routes:
+        - id: provider
+          uri: lb://dubbo-demo-api1
+          predicates:
+            - Path=/shirley/api/**
+          filters:
+            - StripPrefix=2
+
 server:
   port: 7079
 
