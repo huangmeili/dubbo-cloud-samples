@@ -5,3 +5,4 @@ demo-api/target/
 .idea/misc.xml
 *.iml
 .idea/
+spring-cloud-gateway-sample/target/

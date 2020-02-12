@@ -1,0 +1,27 @@
+app:
+  name: spring-cloud-gateway-sample
+spring:
+  application:
+    name: ${app.name}
+  main:
+      # Spring Boot 2.1 需要设定
+      allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: 115.29.189.188:8848
+    gateway:
+      discovery:
+        locator:
+          #让gateway通过服务发现组件找到其他的微服务
+          enabled: true
+server:
+  port: 7079
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

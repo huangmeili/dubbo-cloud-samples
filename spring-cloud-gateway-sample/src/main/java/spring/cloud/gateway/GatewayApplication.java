@@ -1,4 +1,4 @@
-package dubbo.rest.provider;
+package spring.cloud.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -13,9 +13,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ProviderRestApplication {
+public class GatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProviderRestApplication.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
 }
